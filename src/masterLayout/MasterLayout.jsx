@@ -114,7 +114,7 @@ const MasterLayout = ({ children }) => {
                 <div className="sidebar-menu-area">
                     <ul className="sidebar-menu" id="sidebar-menu">
                         <li>
-                            <NavLink to="/handicapper/dashboard" className={(navData) =>
+                            <NavLink to="/dashboard" className={(navData) =>
                                 navData.isActive ? "active-page" : ""
                             }>
                                 <Icon icon="solar:home-smile-angle-outline" className="menu-icon" />
@@ -135,6 +135,22 @@ const MasterLayout = ({ children }) => {
                             }>
                                 <Icon icon="hugeicons:invoice-04" className="menu-icon" />
                                 <span>Installments</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/inventory" className={(navData) =>
+                                navData.isActive ? "active-page" : ""
+                            }>
+                                <Icon icon="hugeicons:invoice-04" className="menu-icon" />
+                                <span>Inventory</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/stock" className={(navData) =>
+                                navData.isActive ? "active-page" : ""
+                            }>
+                                <Icon icon="hugeicons:invoice-04" className="menu-icon" />
+                                <span>Stock</span>
                             </NavLink>
                         </li>
                     </ul>

@@ -13895,3 +13895,59 @@ td.fc-header-center {
 }
 
 /* === footer css end === */
+
+
+
+.receipt-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.receipt-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.receipt-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.receipt-item {
+  flex: 1 1 45%;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.text-danger-600 {
+  color: #e3342f;
+}
+
+.text-primary-light {
+  color: #3490dc;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}

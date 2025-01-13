@@ -1,38 +1,14 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-const MembershipLayer = () => {
+const InventoryLayer = () => {
     const [entriesPerPage, setEntriesPerPage] = useState(10);
     const [currentPage, setCurrentPage] = useState(1);
     const [searchTerm, setSearchTerm] = useState('');
     const [picks, setPicks] = useState([]);
     const [loading, setLoading] = useState(true);
-    const token = localStorage.getItem('token');
-    const [pickToDelete, setPickToDelete] = useState(null);
-    const [deleteModalVisible, setDeleteModalVisible] = useState(false);
-
-    const baseURL = process.env.REACT_APP_BASE_URL;
-
-    // useEffect(() => {
-    //     const url = `${baseURL}/api/admin/picks`;
-    //     axios.get(url, {
-    //         headers: {
-    //             Authorization: `Bearer ${token}`,
-    //         },
-    //     })
-    //         .then((response) => {
-    //             setPicks(response.data.picks || []);
-    //             setLoading(false);
-    //         })
-    //         .catch((error) => {
-    //             console.error('Error fetching picks:', error);
-    //             setLoading(false);
-    //         });
-    // }, [token, baseURL]);
 
     const handleEntriesPerPageChange = (e) => {
         setEntriesPerPage(Number(e.target.value));
@@ -59,48 +35,6 @@ const MembershipLayer = () => {
             setCurrentPage(page);
         }
     };
-
-    const handleDeletePick = (id) => {
-        setPickToDelete(id);
-        setDeleteModalVisible(true);
-    };
-
-    const confirmDeletePick = () => {
-        // if (pickToDelete) {
-        //     axios.delete(`${baseURL}/api/admin/delete-pick/${pickToDelete}`, {
-        //         headers: {
-        //             Authorization: `Bearer ${token}`,
-        //         },
-        //     })
-        //         .then(() => {
-        //             setPicks(picks.filter(pick => pick?._id !== pickToDelete)); // Remove deleted pick from the list
-        //             setDeleteModalVisible(false);
-        //         })
-        //         .catch((error) => {
-        //             console.error('Error deleting pick:', error);
-        //             alert(error.response.data.error);
-        //             setDeleteModalVisible(false);
-        //         });
-        // }
-    };
-
-    const cancelDelete = () => {
-        // setDeleteModalVisible(false);
-        // setPickToDelete(null);
-    };
-
-    // const renderSkeletonRows = () => (
-    //     Array.from({ length: entriesPerPage }).map((_, index) => (
-    //         <tr key={index}>
-    //             <td><Skeleton width={20} /></td>
-    //             <td><Skeleton width={100} /></td>
-    //             <td><Skeleton width={100} /></td>
-    //             <td><Skeleton width={100} /></td>
-    //             <td><Skeleton width={100} /></td>
-    //             <td><Skeleton width={100} /></td>
-    //         </tr>
-    //     ))
-    // );
 
     return (
         <div className="card">
@@ -135,8 +69,8 @@ const MembershipLayer = () => {
                     </div>
                 </div>
                 <div className="d-flex flex-wrap align-items-center gap-3">
-                    <Link to="/membership-form" className="btn btn-sm btn-primary-600">
-                        <i className="ri-add-line" /> Create Membership
+                    <Link to="/inventory/add" className="btn btn-sm btn-primary-600">
+                        <i className="ri-add-line" /> Add New Unit
                     </Link>
                 </div>
             </div>
@@ -145,10 +79,11 @@ const MembershipLayer = () => {
                     <thead>
                         <tr>
                             <th scope="col">S.L</th>
-                            <th scope="col">Membersip Number</th>
-                            <th scope="col">Property Type</th>
-                            <th scope="col">Property Numebr</th>
+                            <th scope="col">Unit Number</th>
+                            <th scope="col">Type</th>
                             <th scope="col">Size</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Status</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -156,10 +91,11 @@ const MembershipLayer = () => {
                         {/* {loading ? renderSkeletonRows() : currentPicks.map((pick, index) => ( */}
                             <tr>
                                 <td>1</td>
-                                <td>MN001</td>
+                                <td>A100</td>
                                 <td>Residential</td>
-                                <td>102</td>
-                                <td>102x207</td>
+                                <td>400x600</td>
+                                <td>10000000</td>
+                                <td>Sold</td>
                                 <td>
                                     <Link
                                         to="#"
@@ -215,4 +151,4 @@ const MembershipLayer = () => {
     );
 };
 
-export default MembershipLayer;
+export default InventoryLayer;

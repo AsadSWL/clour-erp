@@ -5,7 +5,7 @@ import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-const MembershipLayer = () => {
+const InstallmentsLayer = () => {
     const [entriesPerPage, setEntriesPerPage] = useState(10);
     const [currentPage, setCurrentPage] = useState(1);
     const [searchTerm, setSearchTerm] = useState('');
@@ -134,11 +134,6 @@ const MembershipLayer = () => {
                         </span>
                     </div>
                 </div>
-                <div className="d-flex flex-wrap align-items-center gap-3">
-                    <Link to="/membership-form" className="btn btn-sm btn-primary-600">
-                        <i className="ri-add-line" /> Create Membership
-                    </Link>
-                </div>
             </div>
             <div className="card-body">
                 <table className="table bpicked-table mb-0">
@@ -146,9 +141,9 @@ const MembershipLayer = () => {
                         <tr>
                             <th scope="col">S.L</th>
                             <th scope="col">Membersip Number</th>
-                            <th scope="col">Property Type</th>
-                            <th scope="col">Property Numebr</th>
-                            <th scope="col">Size</th>
+                            <th scope="col">Unit Number</th>
+                            <th scope="col">Installment Month</th>
+                            <th scope="col">Amount</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -157,15 +152,15 @@ const MembershipLayer = () => {
                             <tr>
                                 <td>1</td>
                                 <td>MN001</td>
-                                <td>Residential</td>
-                                <td>102</td>
-                                <td>102x207</td>
+                                <td>A100</td>
+                                <td>January</td>
+                                <td>1000000</td>
                                 <td>
                                     <Link
-                                        to="#"
+                                        to="/installment/view"
                                         className="w-32-px h-32-px me-8 bg-info-focus text-info-main rounded-circle d-inline-flex align-items-center justify-content-center"
                                     >
-                                        <Icon icon="mingcute:edit-2-line" />
+                                        <Icon icon="mingcute:eye-2-line" />
                                     </Link>
                                 </td>
                             </tr>
@@ -215,4 +210,4 @@ const MembershipLayer = () => {
     );
 };
 
-export default MembershipLayer;
+export default InstallmentsLayer;
