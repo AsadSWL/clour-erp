@@ -96,10 +96,10 @@ const ViewMemberReceiptsLayer = () => {
                                 <td>Paid</td>
                                 <td>
                                     <Link
-                                        to="#"
+                                        to="/member-receipts/view"
                                         className="w-32-px h-32-px me-8 bg-info-focus text-info-main rounded-circle d-inline-flex align-items-center justify-content-center"
                                     >
-                                        <Icon icon="mingcute:edit-2-line" />
+                                        <Icon icon="mingcute:eye-2-line" />
                                     </Link>
                                 </td>
                             </tr>
@@ -111,10 +111,10 @@ const ViewMemberReceiptsLayer = () => {
                                 <td>Paid</td>
                                 <td>
                                     <Link
-                                        to="#"
+                                        to="/member-receipts/view"
                                         className="w-32-px h-32-px me-8 bg-info-focus text-info-main rounded-circle d-inline-flex align-items-center justify-content-center"
                                     >
-                                        <Icon icon="mingcute:edit-2-line" />
+                                        <Icon icon="mingcute:eye-2-line" />
                                     </Link>
                                 </td>
                             </tr>

@@ -82,7 +82,6 @@ const ViewDealerReceiptsLayer = () => {
                             <th scope="col">Receipt Number</th>
                             <th scope="col">Dealer</th>
                             <th scope="col">Amount</th>
-                            <th scope="col">Transaction</th>
                             <th scope="col">Status</th>
                             <th scope="col">Action</th>
                         </tr>
@@ -97,10 +96,10 @@ const ViewDealerReceiptsLayer = () => {
                                 <td>Paid</td>
                                 <td>
                                     <Link
-                                        to="#"
+                                        to="/dealer-receipts/view"
                                         className="w-32-px h-32-px me-8 bg-info-focus text-info-main rounded-circle d-inline-flex align-items-center justify-content-center"
                                     >
-                                        <Icon icon="mingcute:edit-2-line" />
+                                        <Icon icon="mingcute:eye-2-line" />
                                     </Link>
                                 </td>
                             </tr>
@@ -112,10 +111,10 @@ const ViewDealerReceiptsLayer = () => {
                                 <td>Paid</td>
                                 <td>
                                     <Link
-                                        to="#"
+                                        to="/dealer-receipts/view"
                                         className="w-32-px h-32-px me-8 bg-info-focus text-info-main rounded-circle d-inline-flex align-items-center justify-content-center"
                                     >
-                                        <Icon icon="mingcute:edit-2-line" />
+                                        <Icon icon="mingcute:eye-2-line" />
                                     </Link>
                                 </td>
                             </tr>
