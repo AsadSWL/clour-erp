@@ -38,7 +38,6 @@ const CompanyLayer = () => {
         confirmPassword: ''
     });
 
-    const [errorMessage, setErrorMessage] = useState('');
     const [passwordError, setPasswordError] = useState('');
 
     const handleProfileChange = (e) => {
@@ -201,23 +200,6 @@ const CompanyLayer = () => {
                                         onChange={handleProfileChange}
                                     />
                                 </div>
-                            </div>
-                            <div className="mb-20 col-12">
-                                <label
-                                    htmlFor="bio"
-                                    className="form-label fw-semibold text-primary-light text-sm mb-8"
-                                >
-                                    Bio
-                                </label>
-                                <textarea
-                                    className="form-control radius-8"
-                                    id="bio"
-                                    rows="20"
-                                    name="bio"
-                                    placeholder="Enter your bio"
-                                    value={profileData.bio}
-                                    onChange={handleProfileChange}
-                                ></textarea>
                             </div>
                             <div className="d-flex align-items-center justify-content-center gap-3 mt-24">
                                 <button type="submit" className="btn btn-primary border border-primary-600 text-md px-24 py-12 radius-8">
