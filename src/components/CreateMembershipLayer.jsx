@@ -6,19 +6,6 @@ import axios from 'axios';
 const CreateMembershipLayer = () => {
     const [name, setName] = useState('');
     const [personalNumber, setPersonalNumber] = useState('');
-    const [cnic, setCninc] = useState([]);
-    const [issueDate, setIssueDate] = useState('');
-    const [fatherName, setFatherName] = useState('');
-    const [religion, setReligion] = useState('');
-    const [dob, setDob] = useState([]);
-    const [maritalStatus, setMaritalStatus] = useState([]);
-    const [education, setEducation] = useState(null);
-    const [profession, setProfession] = useState(null);
-    const [adderss, setAddress] = useState(null);
-    const [laneNumber, setLaneNumber] = useState(null);
-    const [streetNumber, setStreetNumber] = useState(null);
-    const [sector, setSector] = useState(null);
-    const [phase, setPhase] = useState(null);
 
     return (
         <div className="card h-100 p-0 radius-12 overflow-hidden">
@@ -70,8 +57,6 @@ const CreateMembershipLayer = () => {
                                 type="text"
                                 className="form-control radius-8"
                                 id="name"
-                                value={cnic}
-                                onChange={(e) => setCninc(e.target.value)}
                                 required
                             />
                         </div>
@@ -80,15 +65,61 @@ const CreateMembershipLayer = () => {
                                 htmlFor="setPlayType"
                                 className="form-label fw-semibold text-primary-light text-sm mb-8"
                             >
-                                Issue Date
+                                Passport Number
+                            </label>
+                            <input
+                                type="text"
+                                className="form-control radius-8"
+                                id="name"
+                                required
+                            />
+                        </div>
+                        <div className="mb-20 col-3">
+                            <label
+                                htmlFor="game"
+                                className="form-label fw-semibold text-primary-light text-sm mb-8"
+                            >
+                                Gender
+                                <span className="text-danger-600">*</span>{" "}
+                            </label>
+                            <select
+                                className="form-control radius-8"
+                                id="game"
+                                required
+                            >
+                                <option value="" selected disabled>Select Gender</option>
+                                <option value="">Male</option>
+                                <option value="">Female</option>
+                            </select>
+                        </div>
+                        <div className="mb-20 col-6">
+                            <label
+                                htmlFor="setPlayType"
+                                className="form-label fw-semibold text-primary-light text-sm mb-8"
+                            >
+                                Address
                                 <span className="text-danger-600">*</span>{" "}
                             </label>
                             <input
-                                type="date"
+                                type="text"
                                 className="form-control radius-8"
                                 id="name"
-                                value={issueDate}
-                                onChange={(e) => issueDate(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <b>Next of kin</b>
+                        <div className="mb-20 col-3">
+                            <label
+                                htmlFor="setPlayType"
+                                className="form-label fw-semibold text-primary-light text-sm mb-8"
+                            >
+                                Name
+                                <span className="text-danger-600">*</span>{" "}
+                            </label>
+                            <input
+                                type="text"
+                                className="form-control radius-8"
+                                id="name"
                                 required
                             />
                         </div>
@@ -104,8 +135,6 @@ const CreateMembershipLayer = () => {
                                 type="text"
                                 className="form-control radius-8"
                                 id="name"
-                                value={fatherName}
-                                onChange={(e) => setFatherName(e.target.value)}
                                 required
                             />
                         </div>
@@ -114,15 +143,13 @@ const CreateMembershipLayer = () => {
                                 htmlFor="setPlayType"
                                 className="form-label fw-semibold text-primary-light text-sm mb-8"
                             >
-                                Religion
+                                CNIC
                                 <span className="text-danger-600">*</span>{" "}
                             </label>
                             <input
                                 type="text"
                                 className="form-control radius-8"
                                 id="name"
-                                value={religion}
-                                onChange={(e) => setReligion(e.target.value)}
                                 required
                             />
                         </div>
@@ -131,74 +158,79 @@ const CreateMembershipLayer = () => {
                                 htmlFor="setPlayType"
                                 className="form-label fw-semibold text-primary-light text-sm mb-8"
                             >
-                                Date Of Birth
+                                Phone Number
                                 <span className="text-danger-600">*</span>{" "}
                             </label>
                             <input
-                                type="date"
+                                type="text"
                                 className="form-control radius-8"
                                 id="name"
-                                value={dob}
-                                onChange={(e) => setDob(e.target.value)}
                                 required
                             />
                         </div>
-                        <div className="mb-20 col-6">
+
+                        <div className="mb-20 col-3">
                             <label
-                                htmlFor="game"
+                                htmlFor="setPlayType"
                                 className="form-label fw-semibold text-primary-light text-sm mb-8"
                             >
-                                Marital Status
+                                Name
                                 <span className="text-danger-600">*</span>{" "}
                             </label>
-                            <select
+                            <input
+                                type="text"
                                 className="form-control radius-8"
-                                id="game"
+                                id="name"
                                 required
-                            >
-                                <option value="" selected disabled>Select</option>
-                                <option value="">Single</option>
-                                <option value="">Married</option>
-                            </select>
+                            />
                         </div>
-                        <div className="mb-20 col-6">
+                        <div className="mb-20 col-3">
                             <label
-                                htmlFor="game"
+                                htmlFor="setPlayType"
                                 className="form-label fw-semibold text-primary-light text-sm mb-8"
                             >
-                                Education
+                                Father Name
                                 <span className="text-danger-600">*</span>{" "}
                             </label>
-                            <select
+                            <input
+                                type="text"
                                 className="form-control radius-8"
-                                id="game"
+                                id="name"
                                 required
-                            >
-                                <option value="" selected disabled>Select</option>
-                                <option value="">Matric</option>
-                                <option value="">Intermediate</option>
-                                <option value="">Bachelors</option>
-                                <option value="">Masters</option>
-                            </select>
+                            />
                         </div>
-                        <div className="mb-20 col-6">
+                        <div className="mb-20 col-3">
                             <label
-                                htmlFor="game"
+                                htmlFor="setPlayType"
                                 className="form-label fw-semibold text-primary-light text-sm mb-8"
                             >
-                                Profession
+                                CNIC
                                 <span className="text-danger-600">*</span>{" "}
                             </label>
-                            <select
+                            <input
+                                type="text"
                                 className="form-control radius-8"
-                                id="game"
+                                id="name"
                                 required
-                            >
-                                <option value="" selected disabled>Select</option>
-                                <option value="">Single</option>
-                                <option value="">Married</option>
-                            </select>
+                            />
                         </div>
+                        <div className="mb-20 col-3">
+                            <label
+                                htmlFor="setPlayType"
+                                className="form-label fw-semibold text-primary-light text-sm mb-8"
+                            >
+                                Phone Number
+                                <span className="text-danger-600">*</span>{" "}
+                            </label>
+                            <input
+                                type="text"
+                                className="form-control radius-8"
+                                id="name"
+                                required
+                            />
+                        </div>
+
+
                     </div>
                     <div className="row mb-3" style={{ border: '1px solid #e5e5e5', padding: '20px', borderRadius: '10px' }}>
                         <h6>Unit Information</h6>
@@ -248,7 +280,7 @@ const CreateMembershipLayer = () => {
                                     icon="solar:camera-outline"
                                     className="text-xl text-secondary-light"
                                 ></Icon>
-                                <span className="fw-semibold text-secondary-light">CNIC Back</span>
+                                <span className="fw-semibold text-secondary-light">CNIC Front</span>
                             </label>
                         </div>
                         <div className="mb-20 col-3">
@@ -260,7 +292,7 @@ const CreateMembershipLayer = () => {
                                     icon="solar:camera-outline"
                                     className="text-xl text-secondary-light"
                                 ></Icon>
-                                <span className="fw-semibold text-secondary-light">CNIC Front</span>
+                                <span className="fw-semibold text-secondary-light">CNIC Back</span>
                             </label>
                         </div>
                         <div className="mb-20 col-3">

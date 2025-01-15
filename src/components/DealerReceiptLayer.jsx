@@ -35,7 +35,7 @@ const DealerReceiptLayer = () => {
                                 htmlFor="name"
                                 className="form-label fw-semibold text-primary-light text-sm mb-8"
                             >
-                                Sold Unit NUmber <span className="text-danger-600">*</span>
+                                Sold Unit Number <span className="text-danger-600">*</span>
                             </label>
                             <select
                                 className="form-control radius-8"
@@ -56,29 +56,13 @@ const DealerReceiptLayer = () => {
                                 htmlFor="name"
                                 className="form-label fw-semibold text-primary-light text-sm mb-8"
                             >
-                                Commission (%) <span className="text-danger-600">*</span>
+                                Commission <span className="text-danger-600">*</span>
                             </label>
                             <input
                                 type="text"
                                 className="form-control radius-8"
                                 id="name"
                                 value="500000"
-                                onChange={(e) => setName(e.target.value)}
-                                disabled
-                            />
-                        </div>
-                        <div className="mb-20 col-6">
-                            <label
-                                htmlFor="name"
-                                className="form-label fw-semibold text-primary-light text-sm mb-8"
-                            >
-                                Pending Amount <span className="text-danger-600">*</span>
-                            </label>
-                            <input
-                                type="text"
-                                className="form-control radius-8"
-                                id="name"
-                                value="Test Member"
                                 onChange={(e) => setName(e.target.value)}
                                 disabled
                             />

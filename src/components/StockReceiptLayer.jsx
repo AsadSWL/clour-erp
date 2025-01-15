@@ -49,13 +49,13 @@ const StockReceiptLayer = () => {
                                 htmlFor="name"
                                 className="form-label fw-semibold text-primary-light text-sm mb-8"
                             >
-                                Pending Amount <span className="text-danger-600">*</span>
+                                Amount <span className="text-danger-600">*</span>
                             </label>
                             <input
                                 type="text"
                                 className="form-control radius-8"
                                 id="name"
-                                value="Test Member"
+                                value="20000"
                                 onChange={(e) => setName(e.target.value)}
                                 disabled
                             />

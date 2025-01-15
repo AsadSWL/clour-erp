@@ -72,7 +72,7 @@ const MemebrReceiptLayer = () => {
                                 type="text"
                                 className="form-control radius-8"
                                 id="name"
-                                value="Test Member"
+                                value="1000000"
                                 onChange={(e) => setName(e.target.value)}
                                 disabled
                             />
