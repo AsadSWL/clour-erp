@@ -14,6 +14,12 @@ import InventoryPage from "./pages/InventoryPage";
 import InventoryAddPage from "./pages/InventoryAddPage";
 import StockPage from "./pages/StockPage";
 import StockAddPage from "./pages/StockAddPage";
+import ViewDealerReceiptsPage from "./pages/ViewDealerReceiptsPage";
+import MemebrReceiptPage from "./pages/MemebrReceiptPage";
+import DealerReceiptPage from "./pages/DealerReceiptPage";
+import StockReceiptPage from "./pages/StockReceiptPage";
+import ViewMemberReceiptsPage from "./pages/ViewMemberReceiptsPage";
+import ViewStockReceiptsPage from "./pages/ViewStockReceiptsPage";
 
 function App() {
     return (
@@ -32,6 +38,13 @@ function App() {
                     <Route exact path="/inventory/add" element={<InventoryAddPage />} />
                     <Route exact path="/stock" element={<StockPage />} />
                     <Route exact path="/stock/add" element={<StockAddPage />} />
+                    <Route exact path="/member-receipts" element={<ViewMemberReceiptsPage />} />
+                    <Route exact path="/dealer-receipts" element={<ViewDealerReceiptsPage />} />
+                    <Route exact path="/stock-receipts" element={<ViewStockReceiptsPage />} />
+                    <Route exact path="/member-receipts/add" element={<MemebrReceiptPage />} />
+                    <Route exact path="/dealer-receipts/add" element={<DealerReceiptPage />} />
+                    <Route exact path="/stock-receipts/add" element={<StockReceiptPage />} />
+                    
                     <Route exact path="/settings" element={<CompanyPage />} />
                     
                     <Route exact path="*" element={<ErrorPage />} />

@@ -153,6 +153,30 @@ const MasterLayout = ({ children }) => {
                                 <span>Stock</span>
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink to="/member-receipts" className={(navData) =>
+                                navData.isActive ? "active-page" : ""
+                            }>
+                                <Icon icon="hugeicons:invoice-04" className="menu-icon" />
+                                <span>Members Receipts</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dealer-receipts" className={(navData) =>
+                                navData.isActive ? "active-page" : ""
+                            }>
+                                <Icon icon="hugeicons:invoice-04" className="menu-icon" />
+                                <span>Dealers Receipts</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/stock-receipts" className={(navData) =>
+                                navData.isActive ? "active-page" : ""
+                            }>
+                                <Icon icon="hugeicons:invoice-04" className="menu-icon" />
+                                <span>Stock Receipts</span>
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </aside>

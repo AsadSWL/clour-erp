@@ -44,8 +44,8 @@ const UnitCountOne = () => {
                     <div className="card-body p-20">
                         <div className="d-flex flex-wrap align-items-center justify-content-between gap-3">
                             <div>
-                                <p className="fw-medium text-primary-light mb-1">Your Memberships</p>
-                                <h3 className="mb-0">1</h3>
+                                <p className="fw-medium text-primary-light mb-1">Received Amount</p>
+                                <h3 className="mb-0">1230000</h3>
                             </div>
                             <div className="w-50-px h-50-px bg-cyan rounded-circle d-flex justify-content-center align-items-center">
                                 <Icon
@@ -63,9 +63,9 @@ const UnitCountOne = () => {
                         <div className="d-flex flex-wrap align-items-center justify-content-between gap-3">
                             <div>
                                 <p className="fw-medium text-primary-light mb-1">
-                                    Paid Installment Amount
+                                    Open Inventory
                                 </p>
-                                <h3 className="mb-0">120000</h3>
+                                <h3 className="mb-0">1200</h3>
                             </div>
                             <div className="w-50-px h-50-px bg-info rounded-circle d-flex justify-content-center align-items-center">
                                 <Icon
@@ -82,8 +82,8 @@ const UnitCountOne = () => {
                     <div className="card-body p-20">
                         <div className="d-flex flex-wrap align-items-center justify-content-between gap-3">
                             <div>
-                                <p className="fw-medium text-primary-light mb-1">Remaining Installment Amount</p>
-                                <h3 className="mb-0">46000</h3>
+                                <p className="fw-medium text-primary-light mb-1">Sold Inventory</p>
+                                <h3 className="mb-0">800</h3>
                             </div>
                             <div className="w-50-px h-50-px bg-red rounded-circle d-flex justify-content-center align-items-center">
                                 <Icon
